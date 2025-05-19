@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Domain Square",
+  "version": "1.0",
+  "description": "Replace site favicon with a color-hash square containing the original favicon, based on domain.tld",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["color-hash.js", "content-script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
